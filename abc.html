@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="abc.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="stopwatch-display">
+            <div class="time" id="hours">00</div>:<div class="time" id="minutes">00</div>:<div class="time" id="seconds">00</div>:<div class="time" id="milliseconds">00</div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
+        <div class="lap-times">
+            <h3>Lap Times</h3>
+            <ul id="lapList"></ul>
+            <div id="recentLap" class="recent-lap">Recent Lap: 00:00:00:00</div>
+        </div>
+        <div class="alarm">
+            <h3>Set Alarm</h3>
+            <input type="number" id="alarmTime" placeholder="Enter seconds" min="1">
+            <button id="setAlarm">Set Alarm</button>
+        </div>
+    </div>
+    <!-- Link to the JavaScript file -->
+    <script src="abc.js"></script>
+</body>
+</html>

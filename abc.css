@@ -1,0 +1,157 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 320px;
+    max-width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stopwatch-display {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.time {
+    display: inline-block;
+    width: 50px;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 2px;
+}
+
+#seconds {
+    background: #007bff;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.controls button:active {
+    transform: scale(0.98);
+}
+
+.controls button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.controls button:hover::before {
+    opacity: 1;
+}
+
+.lap-times {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.lap-times h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.lap-times ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lap-times li {
+    background: #f8f9fa;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.lap-times li:hover {
+    background-color: #e2e6ea;
+}
+
+.recent-lap {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.alarm {
+    margin-top: 20px;
+}
+
+.alarm input {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-size: 1em;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.alarm button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.alarm button:hover {
+    background-color: #218838;
+}
